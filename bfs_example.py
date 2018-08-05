@@ -2,7 +2,7 @@ from time import sleep
 
 
 ## Läs in kartan
-with open("karta.txt", 'r') as f:
+with open("karta4.txt", 'r') as f:
     line = f.readline().strip()
     start = line.split(',')
     start = [int(e) for e in start]
