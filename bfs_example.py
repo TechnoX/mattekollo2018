@@ -13,11 +13,6 @@ with open("karta.txt", 'r') as f:
     karta = resten.split('\n')
     karta = karta[:-1]
 
-
-print("done")
-print(karta)
-print(start)
-print(slut)
 hojd = len(karta)
 bredd = len(karta[0])
 
