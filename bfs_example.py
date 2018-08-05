@@ -21,25 +21,11 @@ print(slut)
 hojd = len(karta)
 bredd = len(karta[0])
 
-# Håller reda på bästa lösningen. Det stora värdet betyder ingen lösning hittad
+# Håller reda på bästa lösningen.
 min_drag = 1000000
 
-# Håller reda på om positionen är besökt. 
+# Håller reda på om positionen är besökt
 besokt = [[False for b in range(bredd)] for h in range(hojd)]
-
-
-def visualisera():
-    print(chr(27) + "[2J")
-    for r in range(hojd):
-        for k in range(bredd):
-            if besokt[r][k]:
-                print(chr(183),end='')
-            else:
-                print(karta[r][k], end='')
-        print("")
-    sleep(0.1)
-    print("")
-
 
 class position():
     def __init__(self, r, k, drag):
@@ -69,7 +55,6 @@ def add(r, k, drag):
 while lista:
     # Nuvarande position
     pos = lista.pop()
-    visualisera()
     if pos.r == slut[0] and pos.k == slut[1]:
         print("Bästa lösning använder ", pos.drag, " drag")
         exit()
