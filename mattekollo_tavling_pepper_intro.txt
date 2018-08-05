@@ -1,0 +1,114 @@
+
+\section{Regler}
+
+\begin{frame}[fragile]{Vad får man använda?}
+
+\begin{itemize}
+\item Bara python 3.7 får användas (det som är installerat på skoldatorerna).
+\item Inga andra bibliotek än de som finns på skoldatorerna (matplotlib, numpy, arcade är installerat förutom standard python) får användas. Vid tveksamheter ska vi kunna testa på en elevdator. Ni får självklart testa på såna i era grupper. 
+\item Internet är tillåtet, men du måste kunna förklara din kod och svara på våra frågor för att få poäng. Du får inte sno \emph{hela} lösningar från nätet. Upptäcker vi fusk på någon uppgift kan ni inte få poäng på den uppgiften. 
+\item Det är tillåtet att anteckna andras lösningar när de presenterar på tavlan, dels för att lära sig men också för att implementera deras algoritm smartare och tjäna mer poäng
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Vilka jobbar?}
+
+\begin{itemize}
+\item Ni jobbar i grupper om 3 så långt det är möjligt. 
+\item Vi har delat upp grupperna. 
+\item Vi lärare kommer inte kunna hjälpa er med någon programmering, ni får fråga varandra i gruppen istället. Det enda vi kan svara på är frågor relaterat till problemformuleringarna. 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Hur fungerar tävlingen?}
+
+\begin{itemize}
+\item Ni får ett problem presenterat på projektorn. Det är relativt enkelt och vi bedömer att det i snitt tar 10 minuter att lösa på egen hand, men förhoppningsvis snabbare i grupp. 
+\item Den som är klar med sin lösning först säger till oss ledare genom att skrika sitt gruppnamn. Då måste de släppa sina datorer och inte koda något mer. 
+\item Gruppen som har en lösning får gå fram till tavlan och koppla in sin dator och starta sitt program. Sen kommer en ledare att testa det med testfall som vi bestämmer. Programmet ska gå att förstå och använda för oss (behöver inte vara snyggt).
+\item Om programmet klarar testfallen så ska ni presentera er kod för de andra deltagarna. Om det inte fungerar / klarar testfallen får ni gå och sätta er igen utan att presentera er kod. 
+\end{itemize} 
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Poängräkning?}
+
+\begin{itemize}
+\item Om ni inte kan förklara er kod tillräckligt bra (bedöms av lärarna) så får ni 0 poäng för det försöket. Ingen annan får heller poäng. 
+\item Om ni har rätt på testfallen (körtid på max ca 30s) och kan förklara er kod får ni 100 poäng. 
+\item Om ni har fel på testfallen så får alla andra tävlande lag 100 poäng. Detta för att ni inte ska chansa och gå fram för tidigt och slösa vår värdefulla tid. 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Poängräkning - special!}
+
+\begin{itemize}
+\item Vissa lag kanske bara hade någon rad kvar innan ett annat lag blev klara och fick presentera. Istället för att slänga bort allt ert fantastiska arbete så ger vi er chansen att visa upp det och ändå få poäng, under förutsättning att er kod är kortare (färre bytes) än de som tidigare presenterat. 
+\item Vi är medvetna om att kort kod inte alltid betyder bra kod, men det är enklare att mäta än tidsåtgången då ni kör på olika datorer. Dessutom finns det många tävlingar där man ska skriva så kort kod som möjligt.
+\end{itemize}
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Poängräkning - special!}
+
+\begin{itemize}
+\item För en korrekt visad lösning som ni kan förklara får ni hälften av poängen som delades ut innan på den här uppgiften.  
+\item För en lösning som inte klarar testfallen så får alla andra lagen hälften av det som delades ut innan på den här uppgiften. 
+\item Ni kan fortsätta att förkorta lösningar och få hälften av poängen igen. Men ni kan aldrig presentera igen på en uppgift som ni redan klarat testfallen på (oavsett om ni kunde förklara er kod och fick full poäng, eller inte klarade och fick 0 poäng). Har ni däremot haft fel på testfallen, och gett alla andra lag poäng, kan ni fortsätta testa på den uppgiften.
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Hur fortsätter det?}
+
+\begin{itemize}
+\item Varje gång någon har klarat testfallen och presenterat korrekt för ett problem så kommer vi släppa ett nytt problem på projektorn. Vi presenterar inte ett nytt problem när någon lyckas visa en ny kortare lösning på ett redan avklarat problem.
+\item Ni får fota eller skriva av problemformuleringen för vi kan inte gå fram och tillbaka mellan problemen hela tiden. 
+\item Ni får alltså fler och fler problem att lösa, och ni kan alltid fortsätta att försöka på problem som ni tidigare inte klarat för att lyckas få halva poäng (vilket fortfarande är rätt mycket!).
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{Exempel!}
+
+\begin{itemize}
+\item Vi har lag A, B, C.  De får ett problem I. 
+\item Lag C säger att de klarat uppgiften och går fram och presenterar, de lyckas både med testfall och att förklara sin kod och får 100 poäng. 
+\item Ett problem II presenteras och lag B delar upp sig så att två personer satsar på det nya medan en fortsätter med problem I. Lag A förstår inte det nya problemet så alla sitter kvar med problem I. 
+\item Lag A skriker att de är klara och får presentera sitt problem. De lyckas och får 50 poäng. Inget nytt problem presenteras då problem I redan är löst.
+\item Lag B är klara med problem II, de lyckas med alla testfall och presentationen och får därmed sina första 100 poäng! 
+\item Problem III presenteras.
+\item Lag B säger att de är klara med problem III, men har tyvärr fel och ger alla andra lag 100 poäng. Inget nytt problem presenteras då. 
+\item Lag B säger igen att de är klara, nu på problem I som en ensam stackare jobbat på. De lyckas med testfallet och får 25 poäng! 
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{Frågor?!}
+
+Något som är oklart innan vi sätter igång? 
+
+\end{frame}
+
+
+
+
+\section{Då börjar vi!}
+

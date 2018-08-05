@@ -1,0 +1,31 @@
+
+Rita ut bilder med hjälp av primitiver. 
+Animera bilderna
+Exempel: http://arcade-book.readthedocs.io/en/latest/labs/lab_02_drawing/drawing.html
+
+
+
+
+Gratis ljud och bilder för spel: https://kenney.nl/
+
+Gör så pedro växer vid varje mumsbit
+Lägg till något som Pedro ska undvika att äta, till exempel choklad
+Lägg till Game Over
+Få mössen att röra sig
+Lägg till ljudeffekter
+Lägg till möjligheten att starta om spelet
+Lägg till maximalt antal möss, och att det inte skapar möss när pedro står still
+Inte kunna skapa möss på pedro (åtminstone ska de inte ge poåäng om de äts upp)
+Begränsa pedros rörelser med väggar och annat som den inte kan röra sig genom
+
+
+Få bokstäverna att gunga nedåt
+Öka hastigheten allt eftersom
+Eller skapa fler och fler bokstäver
+Lägg till andra specialtecken på tangentbordet
+Lägg till möjligheten att starta om spelet
+Lägg till ljudeffekter
+
+
+
+Massa mer information: https://opensource.com/article/18/4/easy-2d-game-creation-python-and-arcade  
