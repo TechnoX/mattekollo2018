@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+  background-color: #CCEEFF;
+}
+h1#ovre{
+  color: lime;
+  font-family: Arial;
+  font-size: 60px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: red;
+  border-radius: 20px;
+  padding: 20px;
+  display: inline-block;
+}
+h1:hover{/* kommentar */
+  color: green;
+  text-decoration: underline;
+}
+sup{
+  color: green;
+  font-weight: bold;
+}
+</style>
+<!-- en kommentar -->
+
+<script>
+
+function mat(){
+  // En kommentar
+  var returnvalue = confirm("Hej, vill du att jag ska laga mat?");
+  if(returnvalue){
+    document.getElementById("ovre").innerHTML = "Då lagar jag köttfärssås";
+  }else{
+    document.getElementById("ovre").innerHTML = "Nehe, vad tråkigt!";
+  }
+
+}
+
+function klickade(){
+  alert("Du har klickat på en lista");
+  for(var v = 0; v < 10; v++){
+    document.getElementById("list").innerHTML += "<li>Ett till element "+v+"</li>";
+  }
+}
+
+</script>
+</head>
+<body onload="mat()">
+<h1 id="ovre" title="Detta är en rubrik">Mattekollo!</h1>
+
+<p>Hej på dig! </p>
+
+<pre>
+Jag gillar      Pedro.<br>
+           Gör inte du?
+</pre>
+
+<p style="background-color: yellow;">Imorgon är en <del>tråkigt</del> <ins>rolig</ins> projektdag! </p>
+
+Vatten = H<sub>2</sub>O <br>
+En tiopotens = 10<sup>4</sup>
+
+<h1 id="nedre">TODO-list: </h1>
+
+<ol id="list" onclick="klickade()">
+<li>Städa rummet</li>
+<li>Dammsuga</li>
+<li>Diska</li>
+</ol>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

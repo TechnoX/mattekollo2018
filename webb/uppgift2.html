@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>En sida</title>
+
+<style>
+body, html{
+    background-color: grey; 
+    font-family: Arial;
+    font-size: 1.2em;
+    height: 100%;
+    margin:0px;
+}
+h1{
+    margin: 0px;
+    padding: 1em;
+    color: #2196F3;
+    text-align: center;
+    font-weight: none;
+}
+.abs{
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+}
+.box{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+}
+#tl{
+    top: 0px;
+    left: 0px;
+}
+#bl{
+    bottom: 0px;
+    left: 0px;
+}
+#tr{
+    top: 0px;
+    right: 0px;
+}
+#br{
+    bottom: 0px;
+    right: 0px;
+}
+#container{
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+    background-color: white;
+    height: 100%;
+}
+#lime{
+    background-color: lime;
+    position: relative;
+    left: -30px;
+}
+#purple{
+    background-color: purple;
+    position: relative;
+    left: 30px;
+}
+#orange{
+    background-color: orange;
+}
+#green{
+    background-color: green;
+    position: relative;
+    top: -80px;
+    left: 30px;
+}
+</style>
+</head>
+<body>
+<div class="abs" id="tl">Upper left corner</div>
+<div class="abs" id="bl">Lower left corner</div>
+<div class="abs" id="tr">Upper right corner</div>
+<div class="abs" id="br">Lower right corner</div>
+<div id="container">
+<h1>Centered heading</h1>
+<div class="box" id="lime"></div>
+<div class="box" id="purple"></div>
+<div class="box" id="orange"></div>
+<div class="box" id="green"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Norsk miniräknare</title>
+<script type="text/javascript">
+window.onerror=null;
+
+function tre()
+    {
+        alert("Denna räkneoperation kan ta lång tid att ladda och kan i vissa fall krascha datorn. Vill du fortsätta?");
+        alert("Observera att denna operation kan krascha datorn. Vill du ändå fortsätta?");
+        alert("Denna operation kan ta av minnet för att slutföra sitt uppdrag. Vill du att WinCounter ska ta MB om det inte räcker med RAM?");
+
+   if  (confirm("VARNING: Hårddisken är full. Önskar du att komprimera hårddisken för att få plats! Detta kan ta flera timmar!"))
+   {
+   alert("VARNING: Hårddisken kan krascha om config.sys redigeras. Är du säker på att du vill fortsätta?")
+   }
+   else {
+   alert("Jag ska bara fråga en sak först...")
+
+         if  (confirm("Vem tror du bestämmer, du eller jag?"))
+         {
+         alert("Nej nu jävlar...")
+         alert("Nu gick drive A...")
+                  if  (confirm("En gång till: Vem tror du bestämmer, du eller jag?"))
+                  {
+                  alert("Nu gick drive C...")
+                  }
+                  else {
+                  alert("Jag trodde väl det...")
+                  }
+         }
+         else {
+         alert("Bra, då väljer jag att komprimera din hårddisk...")
+         }
+
+   }
+        alert("/()(4[///i&%64f¤3[6{}*h]643[/e)3¤x/3()");
+        alert("/()(4[3[3&%43[6{¤36}*h]643[66{}}&%64f3[6{¤[6}*h]643[6/i&&%64f3[6{&%64f3[6{¤[6}*h]64[63[6}*]643[6%4f3{¤3[&%4f3[6{¤36}*h]643[6}*h]64[6{}3[e3¤x/3)");
+
+    }
+
+
+
+
+
+function batteri()
+    {
+        alert("Varning: Pga. svåra uträkningar håller batteriet till datorn på att ta slut... Stoppa in ett nytt!");
+        alert("Vain: Pga. sva träkngar håler bteril drn på tslut...topa ett nt!");
+        alert("Vn: Pg svaräk håbrin ptsl.topetnt!");
+        alert("n: g k hn!");
+        alert("");
+        alert("");
+        alert("");
+    }
+//-->
+</script>
+</head>
+<body>
+<CENTER>
+<FORM NAME="Calc" onSubmit="Calc.Input.value = eval(Calc.Input.value)" method="POST">
+<TABLE BORDER=4>
+<TR>
+<TD><INPUT TYPE="text" NAME="Input" Size="23"></TD>
+</TR>
+<TR>
+<TD>
+
+<INPUT TYPE="button" NAME="one"    VALUE="  1  " WIDTH="50"  OnClick="Calc.Input.value += '1'"><!----
+--><INPUT TYPE="button" NAME="two"   VALUE="  2  " WIDTH="50"  OnCLick="Calc.Input.value += '2'"><!----
+--><INPUT TYPE="button" NAME="three" VALUE="  3  " WIDTH="50"  OnClick="Calc.Input.value += '3'"><!----
+--><INPUT TYPE="button" NAME="plus"  VALUE="  +  " WIDTH="50"  OnClick="Calc.Input.value += '+'"><br><!----
+--><INPUT TYPE="button" NAME="four"  VALUE="  4  " WIDTH="50"  OnClick="Calc.Input.value += '4'"><!----
+--><INPUT TYPE="button" NAME="five"  VALUE="  5  " WIDTH="50"  OnCLick="Calc.Input.value += '5'"><!----
+--><INPUT TYPE="button" NAME="six"   VALUE="  6  " WIDTH="50"  OnClick="Calc.Input.value += '6'"><!----
+--><INPUT TYPE="button" NAME="minus" VALUE="  -  " WIDTH="50"  OnClick="Calc.Input.value += '-'"><br><!----
+--><INPUT TYPE="button" NAME="seven" VALUE="  7  " WIDTH="50"  OnClick="Calc.Input.value += '7'"><!----
+--><INPUT TYPE="button" NAME="eight" VALUE="  8  " WIDTH="50"  OnCLick="Calc.Input.value += '8'"><!----
+--><INPUT TYPE="button" NAME="nine"  VALUE="  9  " WIDTH="50"  OnClick="Calc.Input.value += '9'"><!----
+--><INPUT TYPE="button" NAME="times" VALUE="  x  " WIDTH="50"  OnClick="Calc.Input.value += '*'"><br><!----
+--><INPUT TYPE="button" NAME="("     VALUE="  (  " WIDTH="50"  OnClick="Calc.Input.value += '('"><!----
+--><INPUT TYPE="button" NAME="zero"  VALUE="  0  " WIDTH="50"  OnClick="Calc.Input.value += '0'"><!----
+--><INPUT TYPE="button" NAME=")"     VALUE="  )  " WIDTH="50"  OnClick="Calc.Input.value += ')'"><!----
+--><INPUT TYPE="button" NAME="div"   VALUE="  /  " WIDTH="50"  OnClick="Calc.Input.value += '/'"><BR><!----
+--><INPUT TYPE="button" NAME="clear" VALUE="  c  " WIDTH="50"  OnClick="Calc.Input.value = ''"><!----
+--><INPUT TYPE="button" NAME="."     VALUE="  .  " WIDTH="50"  OnClick="Calc.Input.value += '.'"><!----
+--><INPUT TYPE="button" NAME="DoIt"  VALUE="  =  " WIDTH="100"
+OnClick= '
+
+
+        if ((Input.value == "1+1") || (Input.value == "0+0") || (Input.value == "0*0"))
+        {
+        Input.value =("Var god vänta...")
+
+        setTimeout ("tre()", "2000")
+        setTimeout ("batteri()", "30000")
+        }
+
+        else if ((Input.value == "undefined"))
+        {
+        Input.value =("")
+        }
+
+        else if ((Input.value == ""))
+        {
+        Input.value =("")
+        }
+
+        else if ((Input.value == "Var god vänta..."))
+        {
+        Input.value =("")
+        }
+
+   else if ((Input.value == "" + Calc.Input.value + ""))
+   {
+Calc.Input.value = eval(Calc.Input.value)
+   }
+
+' )><br>
+
+</TD>
+</TR>
+</TABLE>
+</FORM>
+</CENTER>
+
+</body>
+</html>
