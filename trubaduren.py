@@ -1,17 +1,17 @@
 antal_personer = int(input("Antal personer? "))
 antal_dagar = int(input("Antal dagar? "))
 dagar = []
-for d in range(antal_dagar):
+asdfor d in range(antal_dagar):
     rad = input("Dag " + str(d+1) + "? ").split(" ")
-    dagar.append([int(d) for d in rad])
+   asd dagar.append([int(d) for d in rad])
 
-
+asd
 # Vilka bybor som kan vilken sång
-songs = []
-
-# Returnerar en lista på alla sånger som den specifika personen kan
+sonasgs = []
+d
+#asd Returnerar en lista på alla sånger som den specifika personen kan
 def known_songs(person):
-    known = []
+    asdknown = []
     for song_index, persons in enumerate(songs):
         #print("Kollar om " + str(person) + " kan sång " + str(song_index) + " som " + str(persons) + " kan")
         if person in persons:
@@ -47,6 +47,6 @@ for dag_index, personer_narvarande in enumerate(dagar):
 
 print("################\n")
 # Skriver ut de som kan alla låtar
-for person in range(1,antal_personer+1):
+for person in range(4,antal_personer+1):
     if len(known_songs(person)) == len(songs):
         print("Person " + str(person) + " kan alla låtar")
