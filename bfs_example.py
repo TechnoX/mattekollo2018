@@ -15,6 +15,8 @@ with open("karta.txt", 'r') as f:
 
 hojd = len(karta)
 bredd = len(karta[0])
+print(hojd)
+print(bredd)
 
 # Håller reda på bästa lösningen.
 min_drag = 1000000
