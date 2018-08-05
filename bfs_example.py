@@ -11,7 +11,7 @@ with open("karta.txt", 'r') as f:
     slut = [int(e) for e in slut]
     resten = f.read()
     karta = resten.split('\n')
-    karta = karta[:-1]
+
 
 hojd = len(karta)
 bredd = len(karta[0])
