@@ -1,0 +1,121 @@
+# Basics 
+
+git init
+git clone
+git remote add origin (remotes, olika namn! Jmfr med /home/fredrik/rcj-rescue-scoring)
+git status
+git add
+git rm
+git mv
+git commit
+Naming conventions på commits
+
+git diff (nuvarande och mellan commits)
+git log
+
+
+git pull
+git push
+
+.gitignore
+
+
+
+# Ångra saker!
+
+git commit --amend 
+
+git revert -r (till commit, fyra första tecknen räcker)
+
+git reset --hard (till commit)
+
+
+
+
+# Brancher
+
+Naming conventions små bokstäver med bindestreck
+
+git branch feature-add-function (skapar branch)
+
+git checkout feature-add-function
+
+Okommittade saker "reser" mellan brancher. 
+
+git branch (lista brancher)
+
+git status visar branch
+
+
+git checkout master 
+git log
+git merge
+
+git log
+
+
+git branch -D feature-add-function
+
+
+
+
+
+
+# Stashs
+
+git stash
+
+git stash apply (annan branch eller samma branch)
+
+Stash operationen sparas i en stack så du kan ha flera igång samtidigt. Vill du tömma stacken skriver du
+
+git stash clear
+
+
+
+
+
+
+
+# Cherry pick
+
+cherry-pick speciell commit från feature branch, om den innehåller en buggfix som ska till master. 
+
+git checkout master
+git cherry-pick commit
+
+
+
+
+
+
+# Rebasa historiken
+
+git checkout -b rebase-branch
+git rebase -i commit
+
+Om felaktigt och paj byt tillbaka till master och ta bort branchen
+git checkout master
+git branch -D rebase-branch
+
+
+Om resultat bra: 
+
+git branch -D master
+git branch -m master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
