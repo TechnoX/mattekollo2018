@@ -1,0 +1,21 @@
+IDLE
+Operatorer
+Tilldelning
+Prints
+Öppna editorn med Ctrl+N
+Strängar
+If-satser
+Funktioner (För avancerade: rekursivitet)
+Listor (För avancerade: list comprehensions)
+Dict (för avancerade)
+Tuples (för avancerade)
+
+For-loop för ren lista och för en range()
+While-loop
+
+
+
+
+
+
+

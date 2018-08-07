@@ -1,0 +1,123 @@
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+
+<body>
+Content of the document......
+</body>
+
+</html> 
+
+
+Intro:
+
+ * Vad är HTML, Webbläsare, Server, Hemsida, 
+ * Filnamn / ändelser
+ * Grundläggande struktur på HTML sida, head, body, title, html
+ * Start och sluttaggar
+ * Attribut
+ * OBS: Ordning på nästlade taggar! 
+ * Skriva sidan lokalt. 
+
+
+Taggar och attribut:
+HTML
+HEAD
+TITLE
+BODY: BGCOLOR, TEXT, LINK, VLINK, ALINK, BACKGROUND,
+IMG: SRC (behöver ej avslutas!), ALT
+H1, H2, H3, H4, H5, H6: ALIGN
+A: HREF, TARGET, NAME
+BR: 
+HR: WIDTH, ALIGN, COLOR, SIZE, NOSHADE
+P: ALIGN
+STRIKE: 
+STRONG: 
+MARK: 
+EM: 
+DEL: 
+INS: 
+ABBR: <abbr title="HyperText Markup Language">HTML</abbr>
+(
+CODE: 
+KBD: 
+SAMP: 
+VAR: 
+)
+SUB: 
+SUP: 
+DIV, SPAN: 
+OL, UL, LI: 
+TABLE, TR, TD, TH: BORDER, BGCOLOR, HEIGHT, WIDTH, ROWSPAN, COLSPAN, 
+FORM, INPUT, TEXTAREA, SELECT, OPTION: Checkbox, radio, password mfl.
+
+
+
+
+
+OBS: Behövs inte type på style och script! 
+
+
+HTML5 + css (modernt)
+    Doctype
+    meta-tag för utf-8
+    obligatoriska taggar
+    css
+
+
+CSS:
+På style attributet. Och sen i style-taggen! 
+
+background-color
+color
+font-family
+font-size
+text-align (left, right, center)
+
+border-style, border-width, border-color:
+border: 
+border-left
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+
+
+border-left: 6px solid #2196F3;
+background-color: #ddffff;
+(padding-left: 20px;)
+
+border: 2px solid red;
+border-radius: 10px;
+
+padding
+margin
+Skillnad?? 
+
+ * classer och ID för CSS! 
+
+
+
+Javascript? 
+    Inkludera js i kodfilen. Med script taggen. Sen via extern fil. 
+    Variabler. 
+    prompt och alert för att skriva in namn och sen visa.
+    getElementById för att visa namn på sidan. 
+    Funktioner
+    Anropa funktioner från sidan med onclick. T.ex. länkar, men även andra element. 
+    confirm, "Gillar du matte?" och en if-sats, det ante mig eller Jaha?"
+    Nästlade if-satser som http://javascript.nu/javascript/kurs04.shtml
+    Logiska operationer som || och && för att kombinera if-satser. Kolla t.ex. om namn == "Bill Gates" || namn == "Steve Jobs"
+    Inbyggda funktioner, som setTimeout, setTimeout, Math.floor(Math.random()*3)
+    Anropa från onload, onunload, onsubmit
+    Verifiera att man klickat in rätt ruta i ett formulär. Eller fyllt i rätt namn etc.
+    Funktionsparametrar / argument
+    sträng.length, parseInt, parseFloat, substring, 
+    Loopar, for
+
+
+
