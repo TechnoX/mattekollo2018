@@ -1,0 +1,8 @@
+#indata:230
+#Svar: 10
+
+#indata:232
+#Svar: 11
+
+#indata:100
+#Svar: 9

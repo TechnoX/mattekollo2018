@@ -1,0 +1,42 @@
+#Recept:
+# antal ingredienser:
+4
+#Hur mycket du har av varje ingrediens:
+2
+12
+23
+6
+#Hur mycket du behöver av varje:
+4
+10
+11
+8
+#Hur mkt det kostar per enhet:
+4
+3
+5
+2
+#Svar:12
+
+#Recept:
+# antal ingredienser:
+5
+#Hur mycket du har av varje ingrediens:
+7
+80
+13
+27
+12
+#Hur mycket du behöver av varje:
+8
+30
+15
+16
+15
+#Hur mkt det kostar per enhet:
+15
+12
+17
+12
+4
+#Svar: 61

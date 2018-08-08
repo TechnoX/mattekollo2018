@@ -1,0 +1,18 @@
+#år, månad, dag:
+1994
+02
+24
+#svar: torsdag
+
+#år, månad, dag:
+2020
+11
+25
+#svar: onsdag
+
+#år, månad, dag:
+2118
+06
+4
+#svar: lördag
+

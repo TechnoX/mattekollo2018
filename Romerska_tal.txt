@@ -1,0 +1,11 @@
+#indata:
+MXLVI
+#Svar: 1046
+
+#indata:
+MCMLXXV
+#Svar: 1975
+
+#indata:
+MMXIX
+#Svar: 2019
