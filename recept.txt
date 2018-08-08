@@ -4,7 +4,7 @@
 #Hur mycket du har av varje ingrediens:
 2
 12
-23
+11
 6
 #Hur mycket du behöver av varje:
 4
