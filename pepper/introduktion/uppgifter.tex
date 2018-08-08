@@ -1,0 +1,294 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{ccfonts,euler}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{comment}
+\usepackage[includeheadfoot,margin=1.1in]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  escapeinside={\%*}{*)},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  literate={å}{{\r a}}1 {ö}{{\"o}}1 {ä}{{\"a}}1 {Å}{{\r A}}1 {Ö}{{\"O}}1 {Ä}{{\"A}}1
+}
+
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\marginparwidth 5mm
+\topmargin -28mm
+\textheight 282mm
+\textwidth 190mm
+\headheight 4mm
+\headsep 4mm
+
+\sloppy
+
+\newcounter{iii}\setcounter{iii}{0}
+\def\i{\bigskip\noindent\refstepcounter{iii}\textbf{\arabic{iii}.} }
+%\def\iotst#1{\par \smallskip \mbox{}\refstepcounter{iii}\hspace*{#1}\textbf{\arabic{iii}.}}
+\newcounter{pun}[iii]
+\def\pu{\refstepcounter{pun}{\bf(\alph{pun})}\ }
+\def\Pu{\par\noindent\mbox{}\refstepcounter{pun}{\phantom{\textbf{\arabic{iii}.}}\hspace{0.2mm}\bf(\alph{pun})}\ }
+
+\def\ext{\subsection*{Extrauppgifter}}
+
+\title{Programmering, Pepper - Pass 1}
+\date{28 juli}
+
+\makeatletter
+\let\newtitle\@title
+\let\newdate\@date
+\makeatother
+\begin{document}
+
+  \renewcommand*\rmdefault{ppl}\normalfont\upshape
+\pagestyle{empty}
+\large
+\section*{\newdate\ \  \newtitle}
+
+\i Vad kommer skrivas ut av följande uttryck? Om du är osäker så testa att skriva in uttrycken i pythonterminalen.\\
+
+\pu 5.6 - 8
+
+\pu 5,6 - 8
+
+Vad är skillnaden mellan 5.6 och 5,6?\\
+
+Tilldela x och y värden först, såklart! 
+
+\pu x/y
+
+\pu x//y
+
+\pu x\%y
+
+\pu x+=4
+
+\pu x++
+
+\i Lite operationer med strängar, fundera först vad som händer, innan ni testar. Reflektera och fråga om nått är oklart.
+
+\pu x = ”Hello world”
+
+\pu x[7]
+
+\pu x[1:3]
+
+\pu x[-2]
+
+\pu x[1:]
+
+\pu x[:]  \# När vill man använda detta? 
+
+\pu x[:1]
+
+\pu x[:-3]
+
+\pu x[-5:]
+
+\pu x*4
+
+\pu x+"!!"
+
+\i Vi ska nu skriva ett program som omvandlar tum och fot till cm. Vi vet att 1 tum = 2.54 cm och 1 fot = 12 tum. Det är vanligt att skriva '' istället för tum och ' istället för fot. 5'2'' är alltså 5 fot och 2 tum. Skapa en funktion som tar in en sträng med ovanstående format och skriver ut längden i cm. Testa med till exempel följande indata:
+
+\pu 5"
+
+\pu 2'6"
+
+\pu 7'3"
+
+\pu 13'
+
+\pu Gör så användaren får välja om det ska konverteras från cm till tum och fot, eller från tum och fot till cm. 
+
+\pagebreak
+
+\i Vi ska nu skriva rekursiva funktioner, dvs. funktioner som kallas sig själva. Man skulle kunna lösa dessa problem med loopar också men gör inte det nu eftersom vi ska lära oss om rekursiva funktioner. 
+
+\pu Skriv en ny funktion som du döper till ''fakultet'' med en parameter ''värde''. Om man kallar funktionen fakultet(5) så ska man få $ 5! $ men funktionen ska fungera med alla positiva heltal inom rimlig storlek. 
+
+\pu Gör en liknande funktion där man får fibonaccitalföljden. Om man kallar funktionen fibonacci(5) så ska man få det 5:e fibonaccitalet men funktionen ska fungera med alla positiva heltal inom rimlig storlek. 
+
+\i Vi ska nu använda oss av listor. När vi skriver listor i Python använder vi hakparenteser, [, och skiljer de olika variablerna i listan genom att skriva ett kommatecken. Se exemplet nedanför.
+\begin{lstlisting}
+frukter = ["Äpple", "Päron", "Banan"]
+\end{lstlisting}
+Vi kan därefter använda en for-loop på listan vi har skrivit och gå igenom varje element för sig. Ett exempel på detta är
+\begin{lstlisting}
+frukter = ["Äpple", "Päron", "Banan"]
+for frukt in frukter:
+	print(frukt)
+\end{lstlisting}
+Som kommer skriva ut varje frukt för sig efter varandra (testa gärna detta innan ni går vidare). I python börjar numreringen av index (positioner) i listor på 0.
+
+Skapa en lista med namn på minst 3 personer. Skriv ett program som skriver ut ''Hej'' och därefter namnet på personen för varje person.\\
+
+
+\i
+
+Vad händer när man skriver följande? Hur ser a ut efter varje rad? Fundera innan ni skriver in det i terminalen. Ger någon rad error? 
+\begin{lstlisting}
+>>> a = [2,3]
+>>> a[1] = 5
+>>> a[1] = [3,4,5]
+>>> a[2] = [7]
+>>> a[2:] = [7]
+>>> a[2:] = [7,8,9,10]
+>>> a[2:] = [3,4]
+>>> a[:-3] = [0]
+\end{lstlisting}
+
+\pagebreak
+
+\i
+
+Använd list comprehensions för att lösa följande uppgifter. 
+
+\pu
+Skapa en lista med alla kvadrattal mellan 1 och 100. 
+
+%Svar: [ x**2 for x in range(10) ]
+
+\pu
+Skapa en lista med alla tal mellan 1 och 100 som innehåller siffran 1. 
+%Svar: [x for x in range(100) if '1' in str(x)]
+
+\pu
+Utgå från listan [''Björn'', ''Hund'', ''Katt'', ''Pedro'']. Lägg till ett utropstecken till alla strängar och filtrera bort alla strängar som inte innehåller bokstaven 'n'.
+%[ s + "!"  for s in  ["Björn", "Hund", "Katt", "Pedro"] if not "n" in s]
+
+\pu
+Vad gör följande kod? Tänk efter innan ni testar koden.
+\begin{lstlisting}
+[x for x in range(2,100) if not [y for y in range(2,x) if x % y == 0]]
+\end{lstlisting}
+Funkar koden bra på större tal? Kan man göra en liten ändring så att koden blir lite snabbare för större tal?
+
+%Svar: [x for x in range(2,10000) if not [y for y in range(2,int(math.sqrt(x)) + 1) if x % y == 0]]
+
+
+\i Vi använder ''while'' när vi inte vet hur många gånger vi ska köra en loop. Ett exempel på detta är
+\begin{lstlisting}
+tal = input("Ange lösenkod: ")
+korrekt = "1337"
+while tal != korrekt:
+	tal = input("Ange lösenkod: ")
+print("Rätt kod! Nu är du i den hemliga delen av programmet!")
+\end{lstlisting}
+Där programmet stoppar när vi har skrivit in rätt lösenkod. Testa detta före du fortsätter.\\
+Alla program som kan skrivas med en for-loop kan även skrivas med en while-loop, men inte omvänt.\\
+
+Skriv ett program som frågar efter ditt namn och låt loopen köra så länge det är fel. När du skriver in rätt namn skriver programmet ut ''korrekt''. 
+
+\i Du ska göra en funktion som  innehåller en for-loop och en annan funktion som innehåller while-loop. Låt funktionerna beräknade följande, och testa vilken som passar bäst. 
+
+\pu Fakultet
+
+\pu Fibonacci
+
+\i Du ska skapa en namnlista av obestämd längd. Ta hjälp av koden nedan och en while-loop. När man skriver in ''end'' ska koden skriva ut listan och programmet avslutas. 
+
+\begin{lstlisting}
+namn = input("Skriv in ett namn: ") # Låter användaren skriva in ett värde (av typ string/text) och skriver det till variabeln namn. 
+
+namnlista = [] # Skapar en tom lista
+
+namnlista.append(namn) # Lägger till ett element i slutet av listan, i det här fallet värdet av variabeln namn. 
+\end{lstlisting}
+
+\pagebreak
+
+\i Dictionaries är en variant på listor fast den sparar nyckel-värde par istället. Nycklarna måste vara unika (vad betyder unik i detta sammanhang? Är ''a'' och ''A'' unika? Är 1 och 1.0 unika?). 
+
+\begin{lstlisting}
+color_of_fruits = {
+"apple": "red",
+"pear": "green",
+"banana": "yellow"
+}
+print(color_of_fruits["apple"])
+\end{lstlisting}
+Om du vill kan du kopiera exempelkoden och testa. 
+
+\pu Skriv en dictionary med namn som indexering och som har ålder som värde.\\
+
+För att byta värdet till ett av elementen kan man skriva
+\begin{lstlisting}
+color_of_fruits["apple"] = "green"
+\end{lstlisting}
+
+\pu En av personerna i din dictionary har precis fyllt år, och du vill därför ändra åldern på personen. Skriv in ändringen i programmet.\\
+
+För att lägga till ett element i en dictionary skriver man
+\begin{lstlisting}
+color_of_fruits["pineapple"] = "yellow"
+\end{lstlisting}
+
+\pu Lägg till en person i din dictionary med en ålder.
+
+Att skriva dict() är sätt att skapa en tom dictionary. Precis som list() skapar en tom lista. Det går också bra att skriva \{\} respektive [ ].
+
+\i Förutom listor och dictionaries kan man även använda sig utav något som heter tuples. Tuples är som listor, men skiljer sig på ett sätt. Ni ska nu själva få upptäcka hur dom skiljer sig. Ett exempel på en tuple är:
+
+\begin{lstlisting}
+months = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+\end{lstlisting}
+
+\pu Skriv en tuple som innehåller olika färger. Skriv därefter ut första och tredje elementet.\\
+
+För att lägga till ett element i en lista skriver man
+\begin{lstlisting}
+listans_namn.append(<elementet man vill sätta in>)
+\end{lstlisting}
+medan man i dictionaries skriver 
+\begin{lstlisting}
+dictionary_namn["index"] = <elementet man vill sätta in>
+\end{lstlisting}
+
+\pu Försök att lägga till ett element i din tuple med färger.
+
+\pu Ge några exempel på när tuples kan vara bra att använda.
+
+
+
+\ext
+
+
+\i Skriv olika funktioner som känner igen olika intervall med hjälp av b.la. if-satser. 
+
+\pu Funktion som tar in våglängd och ger färg. 
+
+\pu Funktion som tar in frekvens och ger ton.\\
+Ni kan använda Wikipedias sidor för att kolla färgernas intervall i $nm$ och tonernas namn i $Hz$.
+
+
+
+\end{document}

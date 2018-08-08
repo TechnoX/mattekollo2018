@@ -1,0 +1,152 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{ccfonts,euler}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{comment}
+\usepackage[includeheadfoot,margin=1.1in]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  escapeinside={\%*}{*)},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  literate={å}{{\r a}}1 {ö}{{\"o}}1 {ä}{{\"a}}1 {Å}{{\r A}}1 {Ö}{{\"O}}1 {Ä}{{\"A}}1
+}
+
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\marginparwidth 5mm
+\topmargin -28mm
+\textheight 282mm
+\textwidth 190mm
+\headheight 4mm
+\headsep 4mm
+
+\sloppy
+
+\newcounter{iii}\setcounter{iii}{0}
+\def\i{\bigskip\noindent\refstepcounter{iii}\textbf{\arabic{iii}.} }
+%\def\iotst#1{\par \smallskip \mbox{}\refstepcounter{iii}\hspace*{#1}\textbf{\arabic{iii}.}}
+\newcounter{pun}[iii]
+\def\pu{\refstepcounter{pun}{\bf(\alph{pun})}\ }
+\def\Pu{\par\noindent\mbox{}\refstepcounter{pun}{\phantom{\textbf{\arabic{iii}.}}\hspace{0.2mm}\bf(\alph{pun})}\ }
+
+\def\ext{\subsection*{Extrauppgifter}}
+
+\title{Programmering, Pepper - Pass 6}
+\date{3 augusti}
+
+\makeatletter
+\let\newtitle\@title
+\let\newdate\@date
+\makeatother
+\begin{document}
+
+  \renewcommand*\rmdefault{ppl}\normalfont\upshape
+\pagestyle{empty}
+\large
+\section*{\newdate\ \  \newtitle}
+
+\i 
+
+Implementera ditt eget träd från grunden. Du ska ha metoder för att lägga till noder, ta bort noder samt en metod som kollar ifall en nod existerar i trädet.
+
+\pu Ta in en höjd på trädet från användaren, och konstruera ett perfekt balanserat träd med hjälp av den datastruktur som du nyss skapat. 
+
+\pu Skapa kod som visualiserar trädet.
+
+
+\i 
+
+Givet funktionen 
+
+$$ f(x) = (x^2 + x^3) / 1000$$
+
+Lös ekvationen $f(z) = 1$ med binary search.
+Det går lätt att använda numeriska metoder (t.ex. newton-raphson) men det är inte tillåtet för denna uppgift.
+
+\i \textbf{Teknologen Ture}
+
+Teknologen Ture har implementerat ett binärt sökträd. Trädet har följande krav:
+
+\begin{itemize}
+\item Om trädet inte är tomt existerar en rot.
+\item Varje nod i trädet har som mest två barn, ett till vänster och ett till höger.
+\item Varje nod innehåller en nyckel.
+\item För varje nod gäller att noder i delträdet åt vänster har strikt mindre nyckel än nodens nyckel och alla noder i delträdet till höger har strikt större nyckel än nodens nyckel.
+\end{itemize}
+    
+
+    
+
+    
+
+    
+
+När en nyckel sätts in i trädet skapas ett nytt löv i trädet med den givna nyckeln om nyckeln inte redan finns i trädet. Alla egenskaper ovan ska fortfarande uppfyllas. Om trädet är tomt så skapas en rot med den givna nyckeln.
+
+I sitt träd ska Ture sätta in heltal mellan 0
+och 1000 (inklusive). Ture har implementerat trädet och börjat sätta in heltal i det. När han har satt in några inser han att det kan vara så att trädet blivit obalanserat. Ture vill sätta in ett heltal till men han vill undvika att trädets höjd blir större än den redan är. Givet vilka heltal som satts in i trädet, hitta ett heltal i intervallet [0,1000]
+
+som kan sättas in utan att trädets höjd ökar. Det nya heltal får inte redan finnas i trädet.
+
+Tips: Notera att trädets höjd kan bli stor. Rekursiva funktioner som anropas på trädet kan nå gränsen för tillåtet rekursionsdjup i vissa språk. Speciellt i Python kan det ordnas genom att lägga till följande rader i programmet.
+
+\begin{lstlisting}
+import sys
+sys.setrecursionlimit(1500)
+\end{lstlisting}
+
+
+\textbf{Input}
+
+En rad med n heltal, $a_0, a_1, ..., a_{n−1}$: heltalen som Ture har satt in i sitt träd angivna i den ordning de sattes in. Det gäller att $1{\le}n\le1000,0{\le}a_i\le1000$
+
+\textbf{Output}
+
+Ett heltal i intervallet $[0,1000]$: en nyckel som går att sätta in i trädet utan att dess höjd ökar. \\
+Om det finns flera lösningar, skriv ut vilken som helst. Om det inte finns någon lösning, skriv ut $-1$
+
+\textbf{Exempel}
+
+\begin{lstlisting}
+Nycklar som Ture satt in ? 4 2 8 7 10 0
+Det går att sätta in nyckeln: 3
+
+Nycklar som Ture satt in ? 11 5 17
+Det går inte att sätta in nån nyckel: -1
+
+Nycklar som Ture satt in ? 2 1 3 3
+Det går inte att sätta in nån nyckel: -1
+\end{lstlisting}
+
+
+\end{document}

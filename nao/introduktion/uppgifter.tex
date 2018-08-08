@@ -1,0 +1,284 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{bmpsize}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{ccfonts,euler}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{comment}
+\usepackage[includeheadfoot,margin=1.1in]{geometry}
+
+\usepackage{listings}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  literate={å}{{\r a}}1 {ö}{{\"o}}1 {ä}{{\"a}}1 {Å}{{\r A}}1 {Ö}{{\"O}}1 {Ä}{{\"A}}1
+}
+
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\marginparwidth 5mm
+\topmargin -28mm
+\textheight 282mm
+\textwidth 190mm
+\headheight 4mm
+\headsep 4mm
+
+\sloppy
+
+\newcounter{iii}\setcounter{iii}{0}
+\def\i{\bigskip\noindent\refstepcounter{iii}\textbf{\arabic{iii}.} }
+%\def\iotst#1{\par \smallskip \mbox{}\refstepcounter{iii}\hspace*{#1}\textbf{\arabic{iii}.}}
+\newcounter{pun}[iii]
+\def\pu{\refstepcounter{pun}{\bf(\alph{pun})}\ }
+\def\Pu{\par\noindent\mbox{}\refstepcounter{pun}{\phantom{\textbf{\arabic{iii}.}}\hspace{0.2mm}\bf(\alph{pun})}\ }
+
+\def\ext{\subsection*{Extrauppgifter}}
+
+\title{Programmering, Nao - Pass 1}
+\date{28 juli}
+
+\makeatletter
+\let\newtitle\@title
+\let\newdate\@date
+\makeatother
+\begin{document}
+
+  \renewcommand*\rmdefault{ppl}\normalfont\upshape
+\pagestyle{empty}
+\large
+\section*{\newdate\ \  \newtitle}
+
+\i Skriv in uttrycken nedanför i pythonterminalen (IDLE).\\
+
+\pu 1+2
+
+\pu 5-3
+
+\pu 7-10
+
+\pu 5.6 - 8
+
+\pu 5,6 - 8
+
+Vad är skillnaden mellan 5.6 och 5,6?
+
+\pu 3/4
+
+\pu 5/4
+
+\pu 7*4
+
+\pu 5.2*10
+
+\pu 2**3
+
+\pu 3**4
+
+\i Skriv in uttrycken nedanför i pythonterminalen.\\
+
+\pu x = <välj ett tal>
+
+\pu y = <välj ett tal>
+
+\pu print(x)
+
+\pu print(x+y)
+
+\pu x
+
+\pu x/y
+
+\pu x//y
+
+\pu x\%y
+
+\pu x+=4
+
+\pu print(x)
+
+\pu Vilka fler operationer kan man använda före ''='' och vad gör dom?
+
+
+
+\i Nu ska vi lära oss att använda String. Testa genom att skriva detta i terminalen. Vad skiljer?
+
+\pu x = ”Hello world”
+
+\pu x
+
+\pu x[0]
+
+\pu x[1:3]
+
+\pu x[-2]
+
+\pu x[1:]
+
+\pu x[:1]
+
+\pu x[:-3]
+
+\pu x[-5:]
+
+\pu y = ”My name is ”
+
+\pu z = ”<Skriv ditt namn här>”
+
+\pu y+z
+
+
+\i Öppna kodredigeraren genom att trycka ctrl+N i pythonterminalen och gör uppgift 2a,b,d,h och 3a,d,g,h,i. Kom ihåg att använda print() när du ska skriva ut något till terminalen.
+
+\i Skriv följande program i din python-fil. Byt ut ? mot valfritt tal. Testa olika tal och se vad programmet gör
+
+\begin{lstlisting}
+x = 8
+y = ?
+if x<y:
+    print("x är mindre än y")
+elif x>y:
+    print("x är större än y")
+else:
+	print("x är lika med y")
+\end{lstlisting}
+
+\i Skriv om programmet ovanför till
+\begin{lstlisting}
+x = 7
+y = 3
+if x ? y:
+    print("Hurra!")
+else:
+	print("Detta gick inte")
+\end{lstlisting}
+Byt ut frågetecknet med något av tecknen ==, !=, >, >=, <, <=.
+Fundera först över uppgift a) och b), kör därefter programmet med de olika tecknen ovanför och se om du tänkt rätt.
+
+\pu För vilka av dessa tecken kan du byta ut frågetecknet för att programmet ska skriva ut ''Hurra''?
+
+\pu För vilka av dessa tecken kan du byta ut frågetecknet för att programmet ska skriva ut ''Detta gick inte''?
+
+\i Vi ska nu skriva ett program som omvandlar tum och fot till cm. Vi vet att 1 tum = 2.54 cm och 1 fot = 12 tum. Det är vanligt att skriva '' istället för tum och ' istället för fot. 5'2'' är alltså 5 fot och 2 tum. Beräkna följande värden i cm.
+
+\pu 5"
+
+\pu 2'6"
+
+\pu 7'3"
+
+\pu 13'
+
+\i Om en uträkning ska göras flera gånger kan det vara effektivt att skriva en funktion som gör uträkningarna utan att skriva ut samma uttryck varje gång. Ett exempel på en funktion är
+\begin{lstlisting}
+def dubbla(tal):
+	return tal*2
+print (dubbla(4))
+print (dubbla(5))
+\end{lstlisting}
+Som är en funktion som fördubblar talet vi skickar in. I exemplet har vi först skickat in 4 och därefter 5. I terminalen får vi utskrivet 8 och 10 som är det dubbla av talen vi skickat in i funktionen.\\
+
+\pu Skriv en funktion som konverterar från tum till cm.
+
+\pu Skriv en funktion som konverterar från fot till cm genom att använda funktionen du skrev nyss.
+
+\pu Skriv en funktion som konverterar från cm till fot OCH tum
+
+\i Alla funktioner behöver inte ge tillbaka ett värde. 
+
+\begin{lstlisting}
+def greeting(namn):
+	print("Hej ", namn)
+    
+greeting("Jesper")
+\end{lstlisting}
+
+Skapa en liknande funktion som skriver ut summan av två tal så att resultatet blir ''Summan är: <resultat>''
+
+\i Vi ska nu skriva rekursiva funktioner, dvs. funktioner som kallas sig själva. Man skulle kunna lösa dessa problem med loopar också men gör inte det nu eftersom vi ska lära oss om rekursiva funktioner. 
+
+\pu Skriv en ny funktion som du döper till ''fakultet'' med en parameter ''värde''. Om man kallar funktionen fakultet(5) så ska man få $ 5! $ men funktionen ska fungera med alla positiva heltal inom rimlig storlek. 
+
+\pu Gör en liknande funktion där man får fibonaccitalföljden. Om man kallar funktionen fibonacci(5) så ska man få det 5:e fibonaccitalet men funktionen ska fungera med alla positiva heltal inom rimlig storlek. 
+
+\i Vi ska nu använda oss av listor. När vi skriver listor i Python använder vi hakparenteser, [, och skiljer de olika variablerna i listan genom att skriva ett kommatecken. Se exemplet nedanför.
+\begin{lstlisting}
+frukter = ["Äpple", "Päron", "Banan"]
+\end{lstlisting}
+Vi kan därefter använda en for-loop på listan vi har skrivit och gå igenom varje element för sig. Ett exempel på detta är
+\begin{lstlisting}
+frukter = ["Äpple", "Päron", "Banan"]
+for frukt in frukter:
+	print(frukt)
+\end{lstlisting}
+Som kommer skriva ut varje frukt för sig efter varandra (testa gärna detta innan ni går vidare). I python börjar numreringen av index (positioner) i listor på 0.
+
+Skapa en lista med namn på minst 3 personer. Skriv ett program som skriver ut ''Hej'' och därefter namnet på personen för varje person.\\
+
+Extrauppgift: Kan du skriva ett program som skriver ut ''Hej <namn1>, <namn2>, <namn3>, ...'', där <namn> byts ut med valfria namn? Skriv koden så det fungerar med ett odefinierat antal namn. Hur kan du därefter förändra programmet så att den skriver ut ''Hej <namn1>, <namn2>, ..., och <namn9>''?
+
+\i Vi använder ''while'' när vi inte vet hur många gånger vi ska köra en loop. Ett exempel på detta är
+\begin{lstlisting}
+tal = input("Ange lösenkod: ")
+korrekt = "1337"
+while tal != korrekt:
+	tal = input("Ange lösenkod: ")
+print("Rätt kod! Nu är du i den hemliga delen av programmet!")
+\end{lstlisting}
+Där programmet stoppar när vi har skrivit in rätt lösenkod. Testa detta före du fortsätter.\\
+Alla program som kan skrivas med en for-loop kan även skrivas med en while-loop, men inte omvänt.\\
+	
+Skriv ett program som frågar efter ditt namn och låt loopen köra så länge det är fel. När du skriver in rätt namn skriver programmet ut ''korrekt''. Vilka användningsområden har detta?
+
+\i Du ska göra en funktion som  innehåller en for-loop och en annan funktion som innehåller while-loop. Låt funktionerna beräknade följande, och testa vilken som passar bäst. 
+
+\pu Fakultet
+
+\pu Fibonacci
+
+\i Du ska skapa en namnlista av obestämd längd. Ta hjälp av koden nedan och en while-loop. När man skriver in ''end'' ska koden skriva ut listan och programmet avslutas. 
+
+\begin{lstlisting}
+namn = input("Skriv in ett namn: ") # Låter användaren skriva in ett värde (av typ string/text) och skriver det till variabeln namn. 
+
+namnlista = [] # Skapar en tom lista
+
+namnlista.append(namn) # Lägger till ett element i slutet av listan, i det här fallet värdet av variabeln namn. 
+\end{lstlisting}
+
+\ext
+
+\i Skriv olika funktioner som känner igen olika intervall med hjälp av b.la. if-satser. 
+
+\pu Funktion som tar in våglängd och ger färg. 
+
+\pu Funktion som tar in frekvens och ger ton.\\
+Ni kan använda Wikipedias sidor för att kolla färgernas intervall i $nm$ och tonernas namn i $Hz$.
+
+
+\end{document}
